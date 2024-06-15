@@ -18,8 +18,8 @@ def decrypt_xor(ciphertext, key):
 # wysylanie e-maila z zalacznikiem
 def send_email_with_attachment(to_email, subject, body, file_path):
     # to jest moje prywatne konto, prosze uzywac tylko w celach testowania projektu
-    from_email = "michal.sieja90@gmail.com"  
-    password = "rfhs ixfu zrcy smgs" 
+    from_email = "nope@gmail.com"  
+    password = "wywrotka" 
 
     # Tworzenie obiektu MIMEMultipart
     msg = MIMEMultipart()
