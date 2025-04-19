@@ -18,8 +18,8 @@ def decrypt_xor(ciphertext, key):
 # wysylanie e-maila z zalacznikiem
 def send_email_with_attachment(to_email, subject, body, file_path):
     # to jest moje prywatne konto, prosze uzywac tylko w celach testowania projektu
-    from_email = "nope@gmail.com"  
-    password = "wywrotka" 
+    from_email = "przyklad@gmail.com"  
+    password = "prywatny_przyklad" 
 
     # Tworzenie obiektu MIMEMultipart
     msg = MIMEMultipart()
@@ -50,7 +50,7 @@ def send_email_with_attachment(to_email, subject, body, file_path):
 password = input("Podaj haslo: ")
 email = input("Podaj email: ")
 
-# Klucz do szyfrowania
+# Klucz do szyfrowania, to jest przyklad, wiec nie musi byc prywanty
 key = "b45614894561456aefsafa45544456"  # Klucz
 
 # Szyfrowanie wiadomosci
@@ -60,6 +60,8 @@ ciphertext = encrypt_xor(password, key)
 encoded_ciphertext = base64.b64encode(ciphertext.encode('utf-8')).decode('utf-8')
 print("Zakodowana zaszyfrowana wiadomosc (Base64):", encoded_ciphertext)
 
+
+# tutuaj mamy skrypt słuący do deszyfrowani
 decrypt_script = f"""
 import base64
 
